@@ -43,7 +43,7 @@ static void print_in_footer(bool is_error, int line, const char *msg,
 		va_list args)
 {
 	mvwprintw(win_footer, line, 0, (is_error ? " [ERROR] " : " [INFO] "));
-	vwprintw(win_footer, msg, args);
+	vw_printw(win_footer, msg, args);
 	wprintw(win_footer, "\n");
 	wrefresh(win_footer);
 }
