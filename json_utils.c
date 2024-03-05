@@ -83,7 +83,7 @@ static bool json_match_object(struct json_object *jobj,
 		key_is_trusted = json_object_object_get_ex(jtrusted, key,
 				&tmp_trusted);
 
-		if (key_is_trusted == FALSE)
+		if (key_is_trusted == 0)
 			return false;
 
 		res = __json_type_dispatch(val, tmp_trusted);
