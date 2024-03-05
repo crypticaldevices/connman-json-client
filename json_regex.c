@@ -64,7 +64,7 @@ void generate_trusted_json(void)
 	json_object_object_add(jregex_agent_response, "Username", json_object_new_string("^([[:print:]]*)$"));
 	json_object_object_add(jregex_agent_response, "Password", json_object_new_string("^([[:print:]]*)$"));
 
-	jregex_agent_retry_response = json_object_new_boolean(TRUE);
+	jregex_agent_retry_response = json_object_new_boolean(1);
 
 	// See commands.c __cmd_config_service for a better idea of the format.
 	jregex_config_service = json_object_new_object();
@@ -94,7 +94,7 @@ void generate_trusted_json(void)
 	json_object_array_add(arr, json_object_new_string("^([[:print:]]*)$"));
 	json_object_object_add(tmp, key_serv_proxy_excludes, arr);
 	json_object_object_add(opt, key_serv_proxy_config, tmp);
-	json_object_object_add(opt, key_serv_autoconnect, json_object_new_boolean(TRUE));
+	json_object_object_add(opt, key_serv_autoconnect, json_object_new_boolean(1));
 	arr = json_object_new_array();
 	json_object_array_add(arr, json_object_new_string("^([[:print:]]*)$"));
 	json_object_object_add(opt, key_serv_domains_config, arr);
